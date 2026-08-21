@@ -247,6 +247,32 @@ section{
 }
 
 /* =========================================================
+   MUSIC CONTROL BUTTON
+========================================================= */
+
+.music-control-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.music-control-btn:active {
+    transform: scale(0.9);
+}
+
+/* =========================================================
    HERO
 ========================================================= */
 
@@ -745,7 +771,7 @@ section{
 }
 
 /* =========================================================
-   PHOTO GALLERY SECTION (NEW)
+   PHOTO GALLERY SECTION
 ========================================================= */
 
 .gallery-section {
@@ -770,7 +796,6 @@ section{
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     
-    /* Scroll Reveal Initial State */
     opacity: 0;
     transform: translateY(50px) scale(0.9);
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), 
@@ -802,7 +827,6 @@ section{
     font-weight: 600;
 }
 
-/* Swipe-Down Dismiss Animation */
 .photo-card.swipe-down {
     animation: swipeDownDismiss 0.7s forwards ease-in-out;
 }
@@ -1291,7 +1315,7 @@ footer{
 }
 
 /* =========================================================
-   DESKTOP
+   DESKTOP & SMALL MOBILE
 ========================================================= */
 
 @media(min-width:700px){
@@ -1309,10 +1333,6 @@ footer{
         padding:50px;
     }
 }
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
 @media(max-width:380px){
 
@@ -1339,6 +1359,17 @@ footer{
 
 
 <body>
+
+<!-- AUDIO PLAYER -->
+<audio id="bgMusic" loop>
+    <!-- Apna audio file URL/path yahan rakhein -->
+    <source src="bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC TOGGLE BUTTON -->
+<button class="music-control-btn" id="musicToggleBtn" onclick="toggleMusic()">
+    🎵
+</button>
 
 
 <!-- ========================================================
@@ -1385,7 +1416,7 @@ footer{
 
         <button
             class="primary-btn"
-            onclick="scrollToSection('cakeSection')">
+            onclick="playMusic(); scrollToSection('cakeSection');">
 
             🎂 Start Your Birthday Surprise
 
@@ -1507,7 +1538,7 @@ footer{
 
 
 <!-- ========================================================
-     PHOTO GALLERY (NEW SECTION)
+     PHOTO GALLERY
 ======================================================== -->
 
 <section class="gallery-section" id="gallerySection">
@@ -1955,6 +1986,36 @@ footer{
 <script>
 
 /* =========================================================
+   AUDIO CONTROLS
+========================================================= */
+
+const bgMusic = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicToggleBtn');
+let isPlaying = false;
+
+function playMusic() {
+    if (!isPlaying) {
+        bgMusic.play().then(() => {
+            isPlaying = true;
+            musicBtn.innerHTML = "🎶";
+        }).catch((err) => {
+            console.log("Audio play deferred or blocked:", err);
+        });
+    }
+}
+
+function toggleMusic() {
+    if (isPlaying) {
+        bgMusic.pause();
+        isPlaying = false;
+        musicBtn.innerHTML = "🔇";
+    } else {
+        playMusic();
+    }
+}
+
+
+/* =========================================================
    NAVIGATION
 ========================================================= */
 
@@ -1976,6 +2037,8 @@ function scrollToSection(id){
 let candlesBlown=false;
 
 function blowCandles(){
+
+    playMusic(); // Start background music on candle blow
 
     if(candlesBlown)
         return;
@@ -2023,15 +2086,13 @@ function blowCandles(){
 
 
 /* =========================================================
-   PHOTO GALLERY LOGIC (SCROLL REVEAL & SWIPE DISMISS)
+   PHOTO GALLERY LOGIC
 ========================================================= */
 
 function dismissPhoto(card) {
     if (card.classList.contains('swipe-down')) return;
     
     card.classList.add('swipe-down');
-    
-    // Trigger little heart explosion on dismiss
     createHearts();
 }
 
@@ -2048,7 +2109,6 @@ function resetGallery() {
     });
 }
 
-// Scroll Intersection Observer for photo entrance animation
 const observerOptions = {
     threshold: 0.15
 };
