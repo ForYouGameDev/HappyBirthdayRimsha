@@ -1,0 +1,2763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<title>Happy Birthday Rimsha 💖</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+
+    font-family:
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+
+    color:white;
+
+    background:
+    radial-gradient(
+        circle at 50% 20%,
+        #68275f,
+        #321542 45%,
+        #11071e 100%
+    );
+}
+
+/* =========================================================
+   ANIMATED BACKGROUND
+========================================================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-10;
+}
+
+.gradient-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(70px);
+    opacity:.38;
+    animation:orbMove 12s ease-in-out infinite alternate;
+}
+
+.orb1{
+    width:280px;
+    height:280px;
+    background:#ff238f;
+    top:-80px;
+    left:-100px;
+}
+
+.orb2{
+    width:300px;
+    height:300px;
+    background:#713cff;
+    top:35%;
+    right:-130px;
+    animation-delay:2s;
+}
+
+.orb3{
+    width:250px;
+    height:250px;
+    background:#ff6f9d;
+    bottom:-100px;
+    left:25%;
+    animation-delay:4s;
+}
+
+@keyframes orbMove{
+
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    50%{
+        transform:translate(60px,-40px) scale(1.15);
+    }
+
+    100%{
+        transform:translate(-40px,60px) scale(.95);
+    }
+}
+
+/* Stars */
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+
+    animation:
+    twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.6);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* Shooting stars */
+
+.shooting-star{
+    position:absolute;
+    width:90px;
+    height:2px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        white
+    );
+
+    transform:rotate(-30deg);
+
+    opacity:0;
+
+    animation:
+    shooting 7s linear infinite;
+}
+
+@keyframes shooting{
+
+    0%{
+        left:-120px;
+        top:15%;
+        opacity:0;
+    }
+
+    5%{
+        opacity:1;
+    }
+
+    15%{
+        left:120%;
+        top:55%;
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+/* Floating hearts */
+
+.float-heart{
+    position:fixed;
+    bottom:-40px;
+    pointer-events:none;
+    z-index:-1;
+
+    animation:
+    floatHeart 8s linear forwards;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform:
+        translateY(0)
+        scale(.5);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:
+        translateY(-115vh)
+        translateX(var(--move))
+        scale(1.3);
+
+        opacity:0;
+    }
+}
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+section{
+    width:100%;
+}
+
+.section{
+    min-height:100svh;
+    padding:80px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    text-align:center;
+}
+
+.title{
+    font-size:clamp(32px,8vw,52px);
+    font-weight:900;
+    line-height:1.05;
+}
+
+.subtitle{
+    color:#dac8df;
+    line-height:1.7;
+    margin-top:15px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100svh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:40px 20px;
+
+    text-align:center;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-heart{
+    font-size:55px;
+
+    animation:
+    heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+.hero h1{
+    margin-top:20px;
+
+    font-size:
+    clamp(44px,12vw,82px);
+
+    line-height:.98;
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #ff9bc7,
+        #ffd26e,
+        #fff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:
+    textGradient 5s linear infinite;
+}
+
+.hero h1 span{
+    display:block;
+    color:#ff75b8;
+}
+
+@keyframes textGradient{
+
+    to{
+        background-position:300%;
+    }
+}
+
+.hero-description{
+    margin-top:25px;
+    color:#eadced;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.primary-btn{
+
+    border:0;
+
+    margin-top:30px;
+
+    padding:16px 27px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:800;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff329e,
+        #8b52ff
+    );
+
+    box-shadow:
+    0 12px 35px
+    rgba(255,40,160,.35);
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.primary-btn:active{
+    transform:scale(.94);
+}
+
+/* =========================================================
+   CAKE
+========================================================= */
+
+.cake-section{
+    min-height:100svh;
+
+    padding:
+    60px 15px
+    100px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.cake-scene{
+
+    position:relative;
+
+    width:
+    min(350px,94vw);
+
+    height:330px;
+
+    margin:50px auto 0;
+}
+
+/* Plate */
+
+.plate{
+
+    position:absolute;
+
+    bottom:8px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:96%;
+    height:34px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        #fff,
+        #ddd8e6
+    );
+
+    box-shadow:
+    0 18px 35px
+    rgba(0,0,0,.5);
+}
+
+/* Cake */
+
+.cake{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:82%;
+}
+
+/* Cake top */
+
+.cake-top{
+
+    position:relative;
+
+    height:65px;
+
+    border-radius:
+    50%
+    50%
+    15px
+    15px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff,
+        #ffdce9
+    );
+
+    z-index:3;
+}
+
+/* Cake body */
+
+.cake-body{
+
+    position:relative;
+
+    height:105px;
+
+    margin-top:-20px;
+
+    border-radius:
+    15px
+    15px
+    22px
+    22px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #99194e,
+        #e9467e,
+        #ff86ac,
+        #b5215d
+    );
+
+    box-shadow:
+    inset 0 -15px 20px
+    rgba(70,0,30,.25);
+}
+
+/* icing */
+
+.icing{
+
+    position:absolute;
+
+    top:3px;
+    left:0;
+
+    width:100%;
+    height:25px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        #fff,
+        #ffdce9
+    );
+
+    z-index:5;
+}
+
+.drip{
+
+    position:absolute;
+
+    top:13px;
+
+    width:23px;
+    height:35px;
+
+    background:white;
+
+    border-radius:
+    0 0 14px 14px;
+}
+
+.drip:nth-child(1){
+    left:10%;
+}
+
+.drip:nth-child(2){
+    left:34%;
+    height:43px;
+}
+
+.drip:nth-child(3){
+    left:62%;
+    height:37px;
+}
+
+.drip:nth-child(4){
+    left:84%;
+    height:43px;
+}
+
+/* Strawberries */
+
+.strawberry{
+
+    position:absolute;
+
+    width:27px;
+    height:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4264,
+        #c70d3d
+    );
+
+    border-radius:
+    60%
+    60%
+    70%
+    70%;
+
+    z-index:8;
+}
+
+.strawberry:before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-7px;
+    left:7px;
+
+    width:14px;
+    height:10px;
+
+    background:#43a65a;
+
+    border-radius:50%;
+}
+
+.s1{
+    left:12%;
+    top:5px;
+}
+
+.s2{
+    left:47%;
+    top:-4px;
+}
+
+.s3{
+    right:12%;
+    top:5px;
+}
+
+/* =========================================================
+   CANDLES
+========================================================= */
+
+.candles{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:124px;
+
+    transform:translateX(-50%);
+
+    width:68%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    z-index:30;
+}
+
+.candle{
+
+    position:relative;
+
+    width:16px;
+    height:58px;
+
+    border-radius:5px;
+
+    background:
+    repeating-linear-gradient(
+        -45deg,
+        #fff 0 7px,
+        #ff5c9b 7px 14px
+    );
+}
+
+.candle:nth-child(2),
+.candle:nth-child(4){
+    height:67px;
+}
+
+.candle:nth-child(3){
+    height:61px;
+}
+
+/* Flame */
+
+.flame{
+
+    position:absolute;
+
+    left:50%;
+    top:-29px;
+
+    transform:translateX(-50%);
+
+    width:20px;
+    height:29px;
+
+    border-radius:
+    50% 50% 50% 50% /
+    60% 60% 40% 40%;
+
+    background:
+    radial-gradient(
+        circle at 50% 65%,
+        white 0 15%,
+        #fff18a 25%,
+        #ff9a21 55%,
+        #ff4500 85%
+    );
+
+    filter:
+    drop-shadow(
+        0 0 8px #ff9c22
+    )
+
+    drop-shadow(
+        0 0 18px #ff5722
+    );
+
+    animation:
+    flameMove .13s infinite alternate;
+}
+
+@keyframes flameMove{
+
+    from{
+        transform:
+        translateX(-50%)
+        rotate(-4deg)
+        scale(1);
+    }
+
+    to{
+        transform:
+        translateX(-50%)
+        rotate(4deg)
+        scale(1.12,.95);
+    }
+}
+
+/* =========================================================
+   BLOW BUTTON
+========================================================= */
+
+.blow-button{
+
+    margin-top:30px;
+
+    width:
+    min(310px,90vw);
+
+    padding:16px;
+
+    border:0;
+
+    border-radius:50px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff309e,
+        #9750ff
+    );
+
+    font-size:17px;
+    font-weight:800;
+
+    box-shadow:
+    0 10px 30px
+    rgba(255,40,160,.35);
+
+    cursor:pointer;
+}
+
+/* =========================================================
+   PHOTO GALLERY SECTION (NEW)
+========================================================= */
+
+.gallery-section {
+    padding: 80px 15px 100px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.photo-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    
+    /* Scroll Reveal Initial State */
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.photo-card.reveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-caption {
+    padding: 12px;
+    font-size: 14px;
+    color: #ffdce9;
+    background: rgba(20, 10, 30, 0.6);
+    font-weight: 600;
+}
+
+/* Swipe-Down Dismiss Animation */
+.photo-card.swipe-down {
+    animation: swipeDownDismiss 0.7s forwards ease-in-out;
+}
+
+@keyframes swipeDownDismiss {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(120px) rotate(8deg) scale(0.9);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(250px) rotate(15deg) scale(0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* =========================================================
+   MESSAGE CARDS
+========================================================= */
+
+.message-section{
+    padding:
+    80px 15px
+    100px;
+}
+
+.message-card{
+
+    width:
+    min(600px,94vw);
+
+    margin:auto;
+
+    padding:
+    35px 22px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.11),
+        rgba(255,255,255,.035)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.13);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 20px 60px
+    rgba(0,0,0,.25);
+}
+
+.message-icon{
+    font-size:45px;
+}
+
+.message-card h2{
+    margin:15px 0 20px;
+
+    font-size:
+    clamp(28px,7vw,40px);
+}
+
+.message-card p{
+    color:#eaddeb;
+
+    line-height:1.9;
+    font-size:16px;
+}
+
+.pink{
+    color:#ff86bd;
+    font-weight:800;
+}
+
+.gold{
+    color:#ffd36c;
+    font-weight:800;
+}
+
+/* =========================================================
+   MESSAGE CAROUSEL
+========================================================= */
+
+.message-slider{
+
+    margin-top:35px;
+
+    min-height:160px;
+
+    position:relative;
+}
+
+.quote{
+
+    display:none;
+
+    animation:
+    fadeMessage .5s ease;
+}
+
+.quote.active{
+    display:block;
+}
+
+@keyframes fadeMessage{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.message-dots{
+    margin-top:20px;
+}
+
+.message-dot{
+
+    width:8px;
+    height:8px;
+
+    display:inline-block;
+
+    border-radius:50%;
+
+    margin:4px;
+
+    background:#765a79;
+}
+
+.message-dot.active{
+    background:#ff72b4;
+}
+
+/* =========================================================
+   GAMES
+========================================================= */
+
+.games-section{
+
+    padding:
+    80px 15px
+    120px;
+}
+
+.game-card{
+
+    width:
+    min(600px,94vw);
+
+    margin:
+    25px auto;
+
+    padding:28px 20px;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
+    backdrop-filter:blur(15px);
+}
+
+.game-title{
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.game-description{
+    color:#cbb8d0;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* =========================================================
+   WORD PUZZLE
+========================================================= */
+
+.word-display{
+
+    font-size:32px;
+    letter-spacing:7px;
+
+    color:#ff9bc8;
+
+    font-weight:900;
+
+    margin:20px 0;
+}
+
+.answer-input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:15px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+
+    background:
+    rgba(0,0,0,.2);
+
+    color:white;
+
+    text-align:center;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.game-btn{
+
+    margin-top:15px;
+
+    padding:12px 22px;
+
+    border:0;
+
+    border-radius:30px;
+
+    background:#ff4b9d;
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.game-result{
+
+    margin-top:15px;
+
+    min-height:25px;
+
+    color:#ffd36f;
+}
+
+/* =========================================================
+   MEMORY GAME
+========================================================= */
+
+.memory-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:10px;
+
+    max-width:350px;
+
+    margin:auto;
+}
+
+.memory-card{
+
+    aspect-ratio:1;
+
+    border:0;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4ca2,
+        #754cff
+    );
+
+    color:white;
+
+    font-size:27px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.memory-card.open{
+    background:
+    rgba(255,255,255,.12);
+}
+
+.memory-card.matched{
+    background:#3cba7b;
+}
+
+/* =========================================================
+   IMAGE PUZZLE
+========================================================= */
+
+.image-puzzle{
+
+    width:
+    min(330px,90vw);
+
+    aspect-ratio:1;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:3px;
+
+    background:#fff;
+
+    padding:3px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+}
+
+.tile{
+
+    position:relative;
+
+    background-image:
+    url("rimsha.jpg");
+
+    background-size:
+    300% 300%;
+
+    border:0;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.tile.empty{
+    background-image:none;
+    background:#281234;
+}
+
+.tile:active{
+    transform:scale(.94);
+}
+
+/* =========================================================
+   SURPRISE
+========================================================= */
+
+.surprise-section{
+
+    min-height:80svh;
+
+    padding:
+    70px 15px
+    130px;
+
+    text-align:center;
+}
+
+.gift{
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    display:inline-block;
+
+    animation:
+    giftFloat 2s ease-in-out infinite;
+}
+
+@keyframes giftFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.final-message{
+
+    max-width:600px;
+
+    margin:
+    30px auto;
+
+    padding:35px 22px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,65,160,.15),
+        rgba(120,70,255,.13)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.12);
+
+    line-height:1.9;
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.7s;
+}
+
+.final-message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+.confetti{
+
+    position:fixed;
+
+    top:-30px;
+
+    z-index:99999;
+
+    pointer-events:none;
+
+    animation:
+    confettiFall
+    var(--duration)
+    linear forwards;
+}
+
+@keyframes confettiFall{
+
+    to{
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+    }
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:
+    30px 15px 45px;
+
+    color:#98849f;
+
+    font-size:13px;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media(min-width:700px){
+
+    .hero{
+        min-height:760px;
+    }
+
+    .cake-scene{
+        transform:scale(1.08);
+        margin-bottom:25px;
+    }
+
+    .message-card{
+        padding:50px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .cake-scene{
+        transform:scale(.87);
+        transform-origin:center;
+    }
+
+    .memory-grid{
+        gap:7px;
+    }
+
+    .message-card{
+        padding:28px 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ========================================================
+     BACKGROUND
+======================================================== -->
+
+<div class="background" id="background">
+
+    <div class="gradient-orb orb1"></div>
+    <div class="gradient-orb orb2"></div>
+    <div class="gradient-orb orb3"></div>
+
+</div>
+
+
+<!-- ========================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-heart">
+            💗
+        </div>
+
+        <h1>
+            Happy Birthday
+            <span>Rimsha 🎂</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Today is not just another day...
+
+            <br>
+
+            It's the day the world became
+            a little more beautiful because
+            <span class="pink">you</span> were born. 🌸
+
+        </p>
+
+        <button
+            class="primary-btn"
+            onclick="scrollToSection('cakeSection')">
+
+            🎂 Start Your Birthday Surprise
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     CAKE
+======================================================== -->
+
+<section
+    class="cake-section"
+    id="cakeSection">
+
+    <div class="container">
+
+        <h2 class="title">
+            A Cake Made With Love 💖
+        </h2>
+
+        <p class="subtitle">
+
+            Close your eyes...
+            make a wish...
+            and blow the candles. ✨
+
+        </p>
+
+
+        <div class="cake-scene">
+
+
+            <!-- CANDLES -->
+
+            <div class="candles">
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+
+            <!-- CAKE -->
+
+            <div class="cake">
+
+                <div class="cake-top">
+
+                    <div class="icing">
+
+                        <span class="drip"></span>
+                        <span class="drip"></span>
+                        <span class="drip"></span>
+                        <span class="drip"></span>
+
+                    </div>
+
+                    <div class="strawberry s1"></div>
+                    <div class="strawberry s2"></div>
+                    <div class="strawberry s3"></div>
+
+                </div>
+
+
+                <div class="cake-body">
+
+                    <div class="icing">
+
+                        <span class="drip"></span>
+                        <span class="drip"></span>
+                        <span class="drip"></span>
+                        <span class="drip"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="plate"></div>
+
+        </div>
+
+
+        <button
+            class="blow-button"
+            id="blowButton"
+            onclick="blowCandles()">
+
+            💨 Blow The Candles
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     PHOTO GALLERY (NEW SECTION)
+======================================================== -->
+
+<section class="gallery-section" id="gallerySection">
+
+    <div class="container">
+
+        <h2 class="title">
+            📸 Precious Moments 🌸
+        </h2>
+
+        <p class="subtitle">
+
+            Scroll down to watch photos appear with love... ✨
+            <br>
+            <span class="pink">Tap any photo to dismiss it with a magic swipe transition!</span>
+
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="photo-card" onclick="dismissPhoto(this)">
+                <img src="rimsha.jpg" alt="Rimsha Photo 1" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop'">
+                <div class="photo-caption">Sweet Memories 💖</div>
+            </div>
+
+            <div class="photo-card" onclick="dismissPhoto(this)">
+                <img src="rimsha2.jpg" alt="Rimsha Photo 2" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop'">
+                <div class="photo-caption">Always Smiling ✨</div>
+            </div>
+
+            <div class="photo-card" onclick="dismissPhoto(this)">
+                <img src="rimsha3.jpg" alt="Rimsha Photo 3" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop'">
+                <div class="photo-caption">Unforgettable Moments 🌷</div>
+            </div>
+
+            <div class="photo-card" onclick="dismissPhoto(this)">
+                <img src="rimsha4.jpg" alt="Rimsha Photo 4" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop'">
+                <div class="photo-caption">Shine Bright 🌸</div>
+            </div>
+
+        </div>
+
+        <button class="game-btn" style="margin-top:25px;" onclick="resetGallery()">
+            🔄 Reset Photos
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     BEAUTIFUL MESSAGE
+======================================================== -->
+
+<section class="message-section">
+
+    <div class="message-card">
+
+        <div class="message-icon">
+            💌
+        </div>
+
+        <h2>
+            Happy <span class="pink">
+            Birthday Rimsha!</span>
+        </h2>
+
+
+        <div class="message-slider">
+
+            <div class="quote active">
+
+                <p>
+
+                    May your life always be filled
+                    with <span class="pink">
+                    beautiful moments</span>,
+                    peaceful days and endless reasons
+                    to smile. 🌷
+
+                    <br><br>
+
+                    May every dream you hide
+                    inside your heart slowly become
+                    your beautiful reality. ✨
+
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                <p>
+
+                    You deserve a life filled with
+                    <span class="gold">love</span>,
+                    laughter, adventures,
+                    wonderful memories and people
+                    who genuinely care about you. 💖
+
+                    <br><br>
+
+                    Never forget how special
+                    you truly are.
+
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                <p>
+
+                    If today could give you one gift,
+                    I hope it gives you the courage
+                    to chase every dream,
+
+                    <br><br>
+
+                    the strength to overcome every
+                    difficult day,
+
+                    <br><br>
+
+                    and a heart that always
+                    remembers how loved you are. 🌸
+
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                <p>
+
+                    Another year of your beautiful
+                    journey begins today.
+
+                    <br><br>
+
+                    So laugh a little louder,
+                    dream a little bigger,
+                    love a little deeper...
+
+                    <br><br>
+
+                    and make this year
+                    <span class="pink">
+                    unforgettable.</span> ✨
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="message-dots">
+
+            <span class="message-dot active"></span>
+            <span class="message-dot"></span>
+            <span class="message-dot"></span>
+            <span class="message-dot"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     GAMES
+======================================================== -->
+
+<section class="games-section">
+
+    <div class="container">
+
+        <h2 class="title">
+            🎮 Birthday Games
+        </h2>
+
+        <p class="subtitle">
+
+            Before opening the final surprise,
+            complete these little games. 💖
+
+        </p>
+
+
+        <!-- WORD GAME -->
+
+        <div class="game-card">
+
+            <h3 class="game-title">
+                🔤 Birthday Word Puzzle
+            </h3>
+
+            <p class="game-description">
+
+                Rearrange the letters and discover
+                the birthday word.
+
+            </p>
+
+            <div
+                class="word-display"
+                id="wordDisplay">
+
+                H A P P Y
+
+            </div>
+
+            <input
+                id="wordInput"
+                class="answer-input"
+                placeholder="Type your answer..."
+                autocomplete="off">
+
+            <button
+                class="game-btn"
+                onclick="checkWord()">
+
+                Check Answer
+
+            </button>
+
+            <div
+                class="game-result"
+                id="wordResult">
+            </div>
+
+        </div>
+
+
+        <!-- MEMORY GAME -->
+
+        <div class="game-card">
+
+            <h3 class="game-title">
+                🧠 Memory of Love
+            </h3>
+
+            <p class="game-description">
+
+                Find all matching birthday pairs.
+
+            </p>
+
+            <div
+                class="memory-grid"
+                id="memoryGrid">
+            </div>
+
+            <div
+                class="game-result"
+                id="memoryResult">
+
+                Matches: 0 / 8
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE PUZZLE -->
+
+        <div class="game-card">
+
+            <h3 class="game-title">
+                🧩 Rimsha's Image Puzzle
+            </h3>
+
+            <p class="game-description">
+
+                Tap two pieces to swap them
+                and complete the picture. 💕
+
+                <br><br>
+
+                <strong>
+                Put your photo as
+                <span class="pink">
+                rimsha.jpg
+                </span>
+                in the same folder.
+                </strong>
+
+            </p>
+
+
+            <div
+                class="image-puzzle"
+                id="imagePuzzle">
+            </div>
+
+
+            <button
+                class="game-btn"
+                onclick="shufflePuzzle()">
+
+                🔀 Shuffle Puzzle
+
+            </button>
+
+
+            <div
+                class="game-result"
+                id="puzzleResult">
+
+                Complete the picture! ✨
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     FINAL SURPRISE
+======================================================== -->
+
+<section class="surprise-section">
+
+    <div class="container">
+
+        <div
+            class="gift"
+            id="gift"
+            onclick="openSurprise()">
+
+            🎁
+
+        </div>
+
+        <h2 class="title">
+
+            One Last Surprise...
+
+        </h2>
+
+        <p class="subtitle">
+
+            Tap the gift when you're ready. 💝
+
+        </p>
+
+
+        <div
+            class="final-message"
+            id="finalMessage">
+
+            <h2
+                class="pink"
+                style="margin-bottom:20px;">
+
+                🌸 Dear Rimsha 🌸
+
+            </h2>
+
+            <p>
+
+                Sometimes words aren't enough
+                to explain how wonderful
+                someone is.
+
+                <br><br>
+
+                So instead, I hope this little
+                birthday page reminds you of
+                something important:
+
+                <br><br>
+
+                <span class="pink">
+                You matter.
+                </span>
+
+                <br>
+
+                <span class="gold">
+                You are loved.
+                </span>
+
+                <br>
+
+                And you deserve beautiful things.
+
+                <br><br>
+
+                May this new chapter bring you
+                unexpected happiness,
+                beautiful friendships,
+                unforgettable adventures,
+                and dreams that finally come true. ✨
+
+                <br><br>
+
+                Keep your beautiful smile,
+                protect your kind heart,
+                and never stop believing
+                in yourself.
+
+                <br><br>
+
+                <strong
+                    style="
+                    color:#ff9ac8;
+                    font-size:22px;
+                    ">
+
+                    Happy Birthday Rimsha! 🎂💖
+
+                </strong>
+
+                <br><br>
+
+                May your birthday be as beautiful
+                as your smile. 🌷
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with ❤️ especially for Rimsha ✨
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+function scrollToSection(id){
+
+    document
+    .getElementById(id)
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   CANDLE BLOW
+========================================================= */
+
+let candlesBlown=false;
+
+function blowCandles(){
+
+    if(candlesBlown)
+        return;
+
+    candlesBlown=true;
+
+    const flames=
+    document.querySelectorAll(".flame");
+
+    flames.forEach(
+        (flame,index)=>{
+
+            setTimeout(()=>{
+
+                flame.style.transition=
+                "all .5s ease";
+
+                flame.style.opacity="0";
+
+                flame.style.transform=
+                "translateX(-50%) scale(.05)";
+
+            },index*120);
+
+        }
+    );
+
+
+    document
+    .getElementById("blowButton")
+    .innerHTML=
+    "✨ Wish Sent To The Universe 💖";
+
+
+    navigator.vibrate?.(
+        [100,50,100]
+    );
+
+
+    confetti();
+
+    createHearts();
+
+}
+
+
+/* =========================================================
+   PHOTO GALLERY LOGIC (SCROLL REVEAL & SWIPE DISMISS)
+========================================================= */
+
+function dismissPhoto(card) {
+    if (card.classList.contains('swipe-down')) return;
+    
+    card.classList.add('swipe-down');
+    
+    // Trigger little heart explosion on dismiss
+    createHearts();
+}
+
+function resetGallery() {
+    const cards = document.querySelectorAll('.photo-card');
+    cards.forEach((card, index) => {
+        card.classList.remove('swipe-down');
+        card.style.display = 'block';
+        card.classList.remove('reveal');
+        
+        setTimeout(() => {
+            card.classList.add('reveal');
+        }, index * 150);
+    });
+}
+
+// Scroll Intersection Observer for photo entrance animation
+const observerOptions = {
+    threshold: 0.15
+};
+
+const photoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.photo-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('reveal');
+                }, index * 150);
+            });
+            photoObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+const gallerySection = document.getElementById('gallerySection');
+if (gallerySection) {
+    photoObserver.observe(gallerySection);
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+function confetti(){
+
+    const items=[
+        "🎉",
+        "✨",
+        "💖",
+        "💕",
+        "🌸",
+        "⭐",
+        "🎀"
+    ];
+
+    for(
+        let i=0;
+        i<90;
+        i++
+    ){
+
+        const el=
+        document.createElement("div");
+
+        el.className="confetti";
+
+        el.innerHTML=
+        items[
+            Math.floor(
+                Math.random()*
+                items.length
+            )
+        ];
+
+        el.style.left=
+        Math.random()*100+"vw";
+
+        el.style.fontSize=
+        (10+Math.random()*18)+"px";
+
+        el.style.setProperty(
+            "--duration",
+            (2+Math.random()*3)+"s"
+        );
+
+        document.body.appendChild(el);
+
+        setTimeout(
+            ()=>{
+                el.remove();
+            },
+            6000
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   HEARTS
+========================================================= */
+
+function createHearts(){
+
+    const hearts=[
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "💓"
+    ];
+
+    for(
+        let i=0;
+        i<30;
+        i++
+    ){
+
+        setTimeout(()=>{
+
+            const heart=
+            document.createElement("div");
+
+            heart.className=
+            "float-heart";
+
+            heart.innerHTML=
+            hearts[
+                Math.floor(
+                    Math.random()*5
+                )
+            ];
+
+            heart.style.left=
+            Math.random()*100+"vw";
+
+            heart.style.setProperty(
+                "--move",
+                (-120+
+                Math.random()*240)+"px"
+            );
+
+            heart.style.fontSize=
+            (15+
+            Math.random()*25)+"px";
+
+            document.body.appendChild(
+                heart
+            );
+
+            setTimeout(
+                ()=>{
+                    heart.remove();
+                },
+                8000
+            );
+
+        },i*100);
+
+    }
+
+}
+
+
+/* =========================================================
+   MESSAGE SLIDER
+========================================================= */
+
+let messageIndex=0;
+
+const quotes=
+document.querySelectorAll(".quote");
+
+const dots=
+document.querySelectorAll(".message-dot");
+
+setInterval(()=>{
+
+    quotes[messageIndex]
+    .classList.remove("active");
+
+    dots[messageIndex]
+    .classList.remove("active");
+
+    messageIndex++;
+
+    if(
+        messageIndex>=quotes.length
+    )
+        messageIndex=0;
+
+    quotes[messageIndex]
+    .classList.add("active");
+
+    dots[messageIndex]
+    .classList.add("active");
+
+},5000);
+
+
+/* =========================================================
+   WORD PUZZLE
+========================================================= */
+
+let currentWord="HAPPY";
+
+const words=[
+    {
+        mixed:"H A P P Y",
+        answer:"HAPPY"
+    },
+    {
+        mixed:"V O L E",
+        answer:"LOVE"
+    },
+    {
+        mixed:"H S I W",
+        answer:"WISH"
+    },
+    {
+        mixed:"M I S L E",
+        answer:"SMILE"
+    }
+];
+
+let wordIndex=0;
+
+function checkWord(){
+
+    const input=
+    document
+    .getElementById("wordInput")
+    .value
+    .trim()
+    .toUpperCase();
+
+    const result=
+    document
+    .getElementById("wordResult");
+
+    if(
+        input===
+        words[wordIndex].answer
+    ){
+
+        result.innerHTML=
+        "🎉 Correct! You're amazing! 💖";
+
+        wordIndex++;
+
+        if(
+            wordIndex>=words.length
+        ){
+
+            wordIndex=0;
+
+            result.innerHTML=
+            "🏆 All words solved! Birthday Champion! 💖";
+
+            confetti();
+
+        }
+
+        document
+        .getElementById("wordDisplay")
+        .innerText=
+        words[wordIndex].mixed;
+
+        document
+        .getElementById("wordInput")
+        .value="";
+
+    }else{
+
+        result.innerHTML=
+        "💭 Almost! Try again, Rimsha...";
+
+    }
+
+}
+
+
+/* =========================================================
+   MEMORY GAME
+========================================================= */
+
+const memoryIcons=[
+    "💖",
+    "🎂",
+    "🌸",
+    "🎁",
+    "✨",
+    "🦋",
+    "🍰",
+    "💕"
+];
+
+let memoryCards=[
+    ...memoryIcons,
+    ...memoryIcons
+];
+
+memoryCards=
+memoryCards.sort(
+    ()=>Math.random()-.5
+);
+
+const memoryGrid=
+document.getElementById(
+    "memoryGrid"
+);
+
+let firstCard=null;
+let secondCard=null;
+let lockMemory=false;
+let matched=0;
+
+memoryCards.forEach(
+    (icon,index)=>{
+
+        const card=
+        document.createElement("button");
+
+        card.className=
+        "memory-card";
+
+        card.innerHTML="❓";
+
+        card.dataset.icon=
+        icon;
+
+        card.onclick=
+        ()=>flipCard(card);
+
+        memoryGrid.appendChild(card);
+
+    }
+);
+
+function flipCard(card){
+
+    if(
+        lockMemory ||
+        card.classList.contains("open") ||
+        card.classList.contains("matched")
+    )
+        return;
+
+    card.classList.add("open");
+
+    card.innerHTML=
+    card.dataset.icon;
+
+    if(!firstCard){
+
+        firstCard=card;
+        return;
+
+    }
+
+    secondCard=card;
+
+    lockMemory=true;
+
+    if(
+        firstCard.dataset.icon===
+        secondCard.dataset.icon
+    ){
+
+        firstCard.classList.add("matched");
+        secondCard.classList.add("matched");
+
+        matched++;
+
+        document
+        .getElementById("memoryResult")
+        .innerText=
+        `Matches: ${matched} / 8`;
+
+        resetMemory();
+
+        if(matched===8){
+
+            confetti();
+
+            document
+            .getElementById("memoryResult")
+            .innerText=
+            "🏆 Perfect Memory! Rimsha wins! 💖";
+
+        }
+
+    }else{
+
+        setTimeout(()=>{
+
+            firstCard.classList.remove("open");
+            secondCard.classList.remove("open");
+
+            firstCard.innerHTML="❓";
+            secondCard.innerHTML="❓";
+
+            resetMemory();
+
+        },800);
+
+    }
+
+}
+
+function resetMemory(){
+
+    firstCard=null;
+    secondCard=null;
+    lockMemory=false;
+
+}
+
+
+/* =========================================================
+   IMAGE PUZZLE
+========================================================= */
+
+const puzzle=
+document.getElementById(
+    "imagePuzzle"
+);
+
+let tiles=[
+    0,1,2,
+    3,4,5,
+    6,7,8
+];
+
+let selectedTile=null;
+
+function createPuzzle(){
+
+    puzzle.innerHTML="";
+
+    tiles.forEach(
+        (position,index)=>{
+
+            const tile=
+            document.createElement("button");
+
+            tile.className="tile";
+
+            if(position===8){
+
+                tile.classList.add("empty");
+
+            }else{
+
+                const row=
+                Math.floor(position/3);
+
+                const col=
+                position%3;
+
+                tile.style.backgroundPosition=
+                `${col*50}% ${row*50}%`;
+
+            }
+
+            tile.onclick=
+            ()=>{
+                moveTile(index);
+            };
+
+            puzzle.appendChild(tile);
+
+        }
+    );
+
+}
+
+function moveTile(index){
+
+    if(
+        selectedTile===null
+    ){
+
+        selectedTile=index;
+
+        puzzle
+        .children[index]
+        .style.outline=
+        "3px solid #ff72b5";
+
+        return;
+
+    }
+
+    if(
+        selectedTile===index
+    ){
+
+        selectedTile=null;
+
+        createPuzzle();
+
+        return;
+
+    }
+
+    [
+        tiles[selectedTile],
+        tiles[index]
+    ]=[
+        tiles[index],
+        tiles[selectedTile]
+    ];
+
+    selectedTile=null;
+
+    createPuzzle();
+
+    checkPuzzle();
+
+}
+
+function shufflePuzzle(){
+
+    for(
+        let i=tiles.length-1;
+        i>0;
+        i--
+    ){
+
+        const j=
+        Math.floor(
+            Math.random()*(i+1)
+        );
+
+        [
+            tiles[i],
+            tiles[j]
+        ]=[
+            tiles[j],
+            tiles[i]
+        ];
+
+    }
+
+    document
+    .getElementById("puzzleResult")
+    .innerText=
+    "🔀 Puzzle shuffled! Complete it, Rimsha 💕";
+
+    createPuzzle();
+
+}
+
+function checkPuzzle(){
+
+    const solved=
+    tiles.every(
+        (value,index)=>
+        value===index
+    );
+
+    if(solved){
+
+        document
+        .getElementById("puzzleResult")
+        .innerText=
+        "🎉 Picture Complete! Beautiful! 💖";
+
+        confetti();
+
+    }
+
+}
+
+createPuzzle();
+
+
+/* =========================================================
+   FINAL SURPRISE
+========================================================= */
+
+function openSurprise(){
+
+    const message=
+    document.getElementById(
+        "finalMessage"
+    );
+
+    const gift=
+    document.getElementById(
+        "gift"
+    );
+
+    message.classList.toggle("show");
+
+    if(
+        message.classList.contains("show")
+    ){
+
+        gift.innerHTML="💝";
+
+        confetti();
+
+        createHearts();
+
+        message.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    }else{
+
+        gift.innerHTML="🎁";
+
+    }
+
+}
+
+
+/* =========================================================
+   BACKGROUND STARS
+========================================================= */
+
+const background=
+document.getElementById(
+    "background"
+);
+
+for(
+    let i=0;
+    i<70;
+    i++
+){
+
+    const star=
+    document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=
+    Math.random()*100+"%";
+
+    star.style.top=
+    Math.random()*100+"%";
+
+    star.style.animationDelay=
+    Math.random()*3+"s";
+
+    background.appendChild(star);
+
+}
+
+
+/* Shooting stars */
+
+for(
+    let i=0;
+    i<3;
+    i++
+){
+
+    const shooting=
+    document.createElement("div");
+
+    shooting.className=
+    "shooting-star";
+
+    shooting.style.animationDelay=
+    (i*3)+"s";
+
+    background.appendChild(
+        shooting
+    );
+
+}
+
+
+/* =========================================================
+   RANDOM FLOATING HEARTS
+========================================================= */
+
+setInterval(()=>{
+
+    const heart=
+    document.createElement("div");
+
+    heart.className=
+    "float-heart";
+
+    heart.innerHTML=
+    Math.random()>.5
+    ?"♡"
+    :"💗";
+
+    heart.style.left=
+    Math.random()*100+"vw";
+
+    heart.style.setProperty(
+        "--move",
+        (-100+
+        Math.random()*200)+"px"
+    );
+
+    document.body.appendChild(
+        heart
+    );
+
+    setTimeout(
+        ()=>{
+            heart.remove();
+        },
+        8000
+    );
+
+},1800);
+
+
+/* Start */
+
+createHearts();
+
+</script>
+
+</body>
+</html>
